@@ -13,6 +13,7 @@ hasTargetSum([20,35,25], 50);
 
 /* 
   Write the Big O time complexity of your function here
+  runtime: 0(n)
 */
 
 /* 
