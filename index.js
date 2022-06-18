@@ -1,6 +1,14 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    const complement = target - array[i]
+    for (let j = i+1; j < array.length; j++) {
+      if (array[j] === complement) return true;
+  }
 }
+return false;
+}
+console.log(hasTargetSum([20,20,40], 50))
 
 /* 
   Write the Big O time complexity of your function here
@@ -8,8 +16,13 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  1. hasTargetSum(array, target)
+  2. iterates throught each number in the array
+  3. for the current num identify a complement that adds upto the target value
+  4. iterate throught the array again
+  5. if the value achieved is our complement return true 
+  6. else if its not achieved return false
 */
-
 /*
   Add written explanation of your solution here
 */
